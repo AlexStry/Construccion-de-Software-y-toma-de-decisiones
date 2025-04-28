@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+  }
+  
+  header {
+    background-color: #4682B4;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  h1 {
+    color: white;
+    margin: 0;
+  }
+  
+  nav {
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+  
+  nav li {
+    margin: 0 10px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #FFA500;
+  }
+
+
+  #proyectos {
+    background-color: #e8e8e8;
+    padding: 15px;
+    margin: 15px 0;
+  }
+  
+  #aficiones {
+    background-color: #f0f0f0;
+    padding: 15px;
+    margin: 15px 0;
+  }
+
+  #articulos {
+    background-color: #e8e8e8;
+    padding: 15px;
+    margin: 15px 0;
+  }
+  
+  #contacto {
+    background-color: #f0f0f0;
+    padding: 15px;
+    margin: 15px 0;
+  }
+  
+
+  form {
+    display: block;
+    margin: 10px 0;
+  }
+  
+  label {
+    display: block;
+    margin: 10px 0 5px 0;
+    font-weight: bold;
+  }
+
+  button {
+    background-color: #4682B4;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  
+  footer a {
+    color: #FFA500;
+  }
+  
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+  }
+  
+  section {
+    margin-bottom: 20px;
+  }
+  
+  h2 + p {
+    font-style: italic;
+  }
+  
+  strong {
+    color: #4682B4;
+  }
