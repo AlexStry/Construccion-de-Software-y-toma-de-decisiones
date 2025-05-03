@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Framework Tailwind</title>
+  <link href="./dist/output.css" rel="stylesheet" />
+</head>
+<body class="bg-white text-gray-900 font-sans p-6">
+  <h1 class="text-3xl font-bold text-blue-700 mb-4">Framework Tailwind</h1>
+  
+  <div class="mb-6">
+    <p class="text-gray-800">
+      Tailwind es un framework para CSS que te permite crear interfaces modernas y responsivas sin escribir CSS personalizado.  
+      En lugar de crear clases con estilos en un archivo externo, Tailwind te da clases predefinidas que aplicas directamente en tu codigo de HTML.  
+    </p>
+  </div>
+
+  <div class="bg-blue-100 p-4 rounded mb-6">
+    <h2 class="text-xl font-semibold text-blue-800 mb-2">¿Qué es Material Design?</h2>
+    <p class="text-gray-800">
+      Material Design es un lenguaje de diseño desarrollado por la empresa de Google. Se basa en sombras reales, profundidad, jerarquía visual y transiciones suaves.  
+      El objetivo es crear interfaces consistentes y estéticamente agradables en múltiples plataformas.  
+      Material Design promueve el uso de una paleta de colores clara, componentes reutilizables, y animaciones que ayuden al usuario a entender mejor la interfaz.
+    </p>
+  </div>
+
+  <div class="mb-6">
+    <h2 class="text-xl font-semibold text-blue-800 mb-2">Comandos básicos de Tailwind</h2>
+    <p class="mb-4 text-gray-800">
+      Estas son algunas de las clases más comunes en Tailwind CSS que se utilizan para dar estilo directamente en el HTML:
+    </p>
+    <ul class="list-disc list-inside space-y-2">
+      <li><code class="bg-gray-100 px-1">bg-blue-500</code>: cambia el color de fondo</li>
+      <li><code class="bg-gray-100 px-1">text-white</code>: cambia el color del texto</li>
+      <li><code class="bg-gray-100 px-1">text-2xl</code>: cambia el tamaño del texto</li>
+      <li><code class="bg-gray-100 px-1">p-4</code>: aplica padding (espaciado interno)</li>
+      <li><code class="bg-gray-100 px-1">m-2</code>: aplica margen (espaciado externo)</li>
+      <li><code class="bg-gray-100 px-1">rounded</code>: bordes redondeados</li>
+      <li><code class="bg-gray-100 px-1">shadow</code>: agrega una sombra simple</li>
+      <li><code class="bg-gray-100 px-1">flex justify-center</code>: centra contenido horizontalmente usando Flexbox</li>
+      <li><code class="bg-gray-100 px-1">hover:bg-blue-700</code>: cambia el fondo al pasar el mouse (hover)</li>
+      <li><code class="bg-gray-100 px-1">transition</code>: aplica animaciones suaves al cambiar de estado</li>
+    </ul>
+  </div>
+
+  <div class="bg-gray-100 p-4 rounded mb-6">
+    <h2 class="text-lg font-semibold text-gray-800 mb-2">Ejemplo interactivo</h2>
+    <p class="mb-4">Este botón cambia de color al pasar el mouse. Puedes modificarlo agregando clases:</p>
+    <button class="bg-blue-600 hover:bg-blue-800 text-white font-semibold py-2 px-4 rounded transition">
+      Botón de prueba
+    </button>
+  </div>
+</body>
+</html>
