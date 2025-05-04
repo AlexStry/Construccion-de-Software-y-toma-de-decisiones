@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicios JavaScript</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Ejercicios de JavaScript</h1>
+  <div id="resultado1"></div>
+  <div id="resultado2"></div>
+
+  <!--Ej. 3-->
+  <div>
+    <h2>Ejercicio 3: Contador (negativos, ceros, positivos)</h2>
+    <input type="text" id="input3" placeholder="Ej: -2,0,1,5,0,-3" />
+    <button onclick="ejecutarContador()">Calcular</button>
+    <p id="resultado3"></p>
+  </div>
+
+  <!--Ej.4 -->
+  <div>
+    <h2>Ejercicio 4: Promedios de matriz</h2>
+    <textarea id="input4" rows="3" placeholder="Ej: 1,2|3,3|4,4"></textarea>
+    <button onclick="ejecutarPromedios()">Calcular</button>
+    <p id="resultado4"></p>
+  </div>
+
+  <!-- Ej. 5 -->
+  <div>
+    <h2>Ejercicio 5: Inverso</h2>
+    <input type="number" id="input5" placeholder="Ej: 12345" />
+    <button onclick="ejecutarInverso()">Invertir</button>
+    <p id="resultado5"></p>
+  </div>
+<!-- Ej. 6-->
+  <div>
+    <h2>Ejercicio 6: Jugador de Básquetbol</h2>
+    <p>Crea un jugador con nombre y puntos por partido, y evalúa si es una estrella(&gt; 20ppg = star).</p>
+    <label for="nombreJugador">Nombre del jugador:</label>
+    <input type="text" id="nombreJugador" placeholder="Ej: Luka Dončić">
+    <label for="puntosJugador">Puntos por partido:</label>
+    <input type="number" id="puntosJugador" placeholder="Ej: 28.5">
+    <button onclick="crearJugador()">Evaluar jugador</button>
+    <div id="resultadoJugador"></div>
+  </div>
+
+  <script src="funciones.js"></script>
+  <script>
+    // Ej. 1
+    const numero = parseInt(prompt("Ejercicio 1: Ingresa un número:"));
+    document.getElementById("resultado1").innerHTML = tablaCuadradosCubos(numero);
+
+    // Ej. 2
+    document.getElementById("resultado2").innerHTML = `<p>${sumaConTiempo()}</p>`;
+
+    // Ej. 3
+    function ejecutarContador() {
+      const texto = document.getElementById("input3").value;
+      const arreglo = texto.split(",").map(n => parseInt(n));
+      const [neg, ceros, pos] = contador(arreglo);
+      document.getElementById("resultado3").innerText =
+        `Negativos: ${neg}, Ceros: ${ceros}, Positivos: ${pos}`;
+    }
+
+    // Ej. 4
+    function ejecutarPromedios() {
+      const texto = document.getElementById("input4").value;
+      const filas = texto.split("|").map(f => f.split(",").map(Number));
+      const proms = promedios(filas);
+      document.getElementById("resultado4").innerText =
+        `Promedios: [${proms.map(n => n.toFixed(2)).join(", ")}]`;
+    }
+
+    // Ej. 5
+    function ejecutarInverso() {
+      const num = parseInt(document.getElementById("input5").value);
+      const inv = inverso(num);
+      document.getElementById("resultado5").innerText =
+        `Número invertido: ${inv}`;
+    }
+  </script>
+</body>
+</html>
