@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validador de Contraseñas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <h1 id="titulo">Validador de Contraseñas</h1>
+
+    <form id="formulario">
+      <div class="campo">
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required />
+        <div class="ayuda" id="ayuda-password">Debe tener al menos 8 caracteres, 1 número y 1 mayúscula.</div>
+      </div>
+
+      <div class="campo">
+        <label for="confirmar">Confirmar contraseña:</label>
+        <input type="password" id="confirmar" name="confirmar" required />
+        <div class="ayuda" id="ayuda-confirmar">Debe coincidir exactamente con la contraseña.</div>
+      </div>
+
+      <div id="mensaje-validacion"></div>
+
+    </form>
+
+    <section id="drag-zone">
+        <h2>Drag and Drop</h2>
+        <p>Arrastra el candado sobre la caja para validar.</p>
+        <div id="draggable" draggable="true" ondragstart="drag(event)">🔒</div>
+        <div id="dropzone" ondragover="allowDrop(event)" ondrop="drop(event)">Suelta aquí</div>
+      </section>
+
+      <div class="preguntas-seguridad">
+        <h2>Preguntas</h2>
+       <p><strong>¿Por qué es una buena práctica usar JavaScript para validar los inputs antes de enviar los datos al servidor?</strong><br>
+        Mejora la experiencia del usuario al ofrecer retroalimentación inmediata y evita solicitudes innecesarias al servidor, reduciendo carga y tiempos de respuesta. También puede ayudar para prevenir errores comunes antes de procesar la información.</p>
+      
+        <p><strong>¿Cómo puedes saltarte la seguridad de validaciones hechas con JavaScript?</strong><br>
+        JavaScript se ejecuta del lado del cliente(navegador), por lo que un usuario puede inspeccionar, modificar o incluso desactivar el código. Por ejemplo, puede usar herramientas del navegador para eliminar validaciones o enviar datos manipulados utilizando "inspeccion" en el browser.</p>
+      
+        <p><strong>Si se puede saltar, entonces ¿por qué es una buena práctica?</strong><br>
+        Porque la validación en el cliente es útil para el usuario, pero nunca debe reemplazar la validación del lado del servidor. De igual manera se podrian integrar ambas: primero para mejorar la usabilidad, y después para garantizar la seguridad en el backend.</p>
+      
+        <h3>Referencias</h3>
+        <ul>
+          <li><a href="https://www.w3schools.com/html/html5_draganddrop.asp" target="_blank">https://www.w3schools.com/html/html5_draganddrop.asp</a></li>
+          <li><a href="https://github.com/ryanmcdermott/clean-code-javascript" target="_blank">https://github.com/ryanmcdermott/clean-code-javascript</a></li>
+          <li><a href="https://medium.com/better-programming/modern-frontend-hacking-cheatsheets-df9c2566c72a" target="_blank">https://medium.com/better-programming/modern-frontend-hacking-cheatsheets-df9c2566c72a</a></li>
+          <li><a href="https://www.w3schools.com/howto/howto_js_password_validation.asp" target="_blank">https://www.w3schools.com/howto/howto_js_password_validation.asp</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/input_event" target="_blank">https://developer.mozilla.org/en-US/docs/Web/API/Element/input_event</a></li>
+        </ul>
+      </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
