@@ -1,0 +1,124 @@
+body {
+    font-family: sans-serif;
+    background-color: #ECEFF1;
+    padding: 20px;
+    color: #263238;
+  }
+  
+  main {
+    max-width: 500px;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  h1, h2 {
+    text-align: center;
+    color: #2E7D32;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .campo {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input[type="password"] {
+    padding: 8px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+  }
+  
+  input[type="password"]:focus {
+    border-color: #FF7043;
+    outline: none;
+  }
+  
+  .ayuda {
+    font-size: 0.85em;
+    color: #555;
+    display: none;
+  }
+  
+  #mensaje-validacion {
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  #drag-zone {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+  }
+  
+  #draggable {
+    width: 50px;
+    height: 50px;
+    background-color: #2E7D32;
+    color: white;
+    border-radius: 50%;
+    font-size: 24px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    cursor: grab;
+  }
+  
+  #dropzone {
+    margin-top: 15px;
+    padding: 20px;
+    border: 2px dashed #2E7D32;
+    border-radius: 8px;
+    background-color: #A5D6A7;
+  }
+  
+  #dropzone.hover {
+    background-color: #C8E6C9;
+  }
+
+  .preguntas-seguridad {
+    background-color: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .preguntas-seguridad h2 {
+    color: #FF7043;
+    margin-bottom: 15px;
+  }
+  
+  .preguntas-seguridad p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+  
+  .preguntas-seguridad ul {
+    padding-left: 20px;
+    margin-top: 10px;
+  }
+  
+  .preguntas-seguridad a {
+    color: #2E7D32;
+    text-decoration: none;
+  }
+  
