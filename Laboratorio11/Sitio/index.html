@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicios JavaScript</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Ejercicios de JavaScript</h1>
+  <div id="resultado1"></div>
+  <div id="resultado2"></div>
+
+  <!--Ej. 3-->
+  <div>
+    <h2>Ejercicio 3: Contador (negativos, ceros, positivos)</h2>
+    <input type="text" id="input3" placeholder="Ej: -2,0,1,5,0,-3" />
+    <button onclick="ejecutarContador()">Calcular</button>
+    <p id="resultado3"></p>
+  </div>
+
+  <!--Ej.4 -->
+  <div>
+    <h2>Ejercicio 4: Promedios de matriz</h2>
+    <textarea id="input4" rows="3" placeholder="Ej: 1,2|3,3|4,4"></textarea>
+    <button onclick="ejecutarPromedios()">Calcular</button>
+    <p id="resultado4"></p>
+  </div>
+
+  <!-- Ej. 5 -->
+  <div>
+    <h2>Ejercicio 5: Inverso</h2>
+    <input type="number" id="input5" placeholder="Ej: 12345" />
+    <button onclick="ejecutarInverso()">Invertir</button>
+    <p id="resultado5"></p>
+  </div>
+<!-- Ej. 6-->
+  <div>
+    <h2>Ejercicio 6: Jugador de Básquetbol</h2>
+    <p>Crea un jugador con nombre y puntos por partido, y evalúa si es una estrella(&gt; 20ppg = star).</p>
+    <label for="nombreJugador">Nombre del jugador:</label>
+    <input type="text" id="nombreJugador" placeholder="Ej: Luka Dončić">
+    <label for="puntosJugador">Puntos por partido:</label>
+    <input type="number" id="puntosJugador" placeholder="Ej: 28.5">
+    <button onclick="crearJugador()">Evaluar jugador</button>
+    <div id="resultadoJugador"></div>
+  </div>
+
+  <!-- Formulario conectado al servidor -->
+<div>
+  <h2>Formulario: Enviar Comentario al Servidor</h2>
+  <form action="/form/enviar" method="POST">
+    <label for="nombreForm">Nombre:</label>
+    <input type="text" id="nombreForm" name="nombre" required placeholder="Tu nombre" />
+
+    <label for="comentarioForm">Comentario:</label>
+    <textarea id="comentarioForm" name="comentario" rows="4" required placeholder="Escribe tu comentario..."></textarea>
+
+    <button type="submit">Enviar</button>
+  </form>
+</div>
+
+
+  <script src="funciones.js"></script>
+  <script>
+    // Ej. 1
+    const numero = parseInt(prompt("Ejercicio 1: Ingresa un número:"));
+    document.getElementById("resultado1").innerHTML = tablaCuadradosCubos(numero);
+
+    // Ej. 2
+    document.getElementById("resultado2").innerHTML = `<p>${sumaConTiempo()}</p>`;
+
+    // Ej. 3
+    function ejecutarContador() {
+      const texto = document.getElementById("input3").value;
+      const arreglo = texto.split(",").map(n => parseInt(n));
+      const [neg, ceros, pos] = contador(arreglo);
+      document.getElementById("resultado3").innerText =
+        `Negativos: ${neg}, Ceros: ${ceros}, Positivos: ${pos}`;
+    }
+
+    // Ej. 4
+    function ejecutarPromedios() {
+      const texto = document.getElementById("input4").value;
+      const filas = texto.split("|").map(f => f.split(",").map(Number));
+      const proms = promedios(filas);
+      document.getElementById("resultado4").innerText =
+        `Promedios: [${proms.map(n => n.toFixed(2)).join(", ")}]`;
+    }
+
+    // Ej. 5
+    function ejecutarInverso() {
+      const num = parseInt(document.getElementById("input5").value);
+      const inv = inverso(num);
+      document.getElementById("resultado5").innerText =
+        `Número invertido: ${inv}`;
+    }
+  </script>
+    
+  <div class="preguntas-frecuentes">
+    <h2>Preguntas</h2>
+    <p><strong>¿Qué diferencias y semejanzas hay entre Java y JavaScript?</strong><br>
+    Aunque comparten parte del nombre Java y JavaScript son lenguajes completamente diferentes. Java es un lenguaje compilado,
+    orientado a objetos. JavaScript es un lenguaje interpretado, diseñado para la web y se ejecuta en el navegador. 
+    Ambos usan sintaxis similar en estructuras como <code>if</code>, <code>for</code> pero se aplican en contextos distintos.</p>
+  
+    <p><strong>¿Qué métodos tiene el objeto Date? (Menciona al menos 5)</strong><br>
+    Algunos métodos útiles de <code>Date</code> son:<br>
+    - <code>getFullYear()</code>: devuelve el año.<br>
+    - <code>getMonth()</code>: devuelve el mes (0–11).<br>
+    - <code>getDate()</code>: devuelve el día del mes.<br>
+    - <code>getHours()</code>: devuelve la hora.<br>
+    - <code>toLocaleDateString()</code>: devuelve una cadena legible con la fecha.</p>
+  
+    <p><strong>¿Qué métodos tienen los arreglos? (Menciona al menos 5)</strong><br>
+    Algunos métodos de <code>Array</code> son:<br>
+    - <code>push()</code>: agrega elementos al final.<br>
+    - <code>pop()</code>: elimina el último elemento.<br>
+    - <code>map()</code>: crea un nuevo arreglo aplicando una función a cada elemento.<br>
+    - <code>filter()</code>: filtra elementos bajo una condición.<br>
+    - <code>reduce()</code>: reduce el arreglo a un solo valor.</p>
+  
+    <p><strong>¿Cómo se declara una variable con alcance local dentro de una función?</strong><br>
+    Se puede declarar con <code>let</code> o <code>const</code> dentro de la función:<br>
+    <code>function ejemplo() { let x = 10; }</code></p>
+  
+    <p><strong>¿Qué implicaciones tiene utilizar variables globales dentro de funciones?</strong><br>
+    Usar variables globales puede provocar conflictos inesperados, dificultad para mantener el código y errores difíciles de arrgelar, ya que cualquier función puede modificar su valor.</p>
+
+    <p><strong>¿Describe el Archivo package.json?</strong><br>
+      El archivo package.json es el archivo de configuracion de un proyecto en Node. El archivo ayuda para: describir el proyecto, gestionar las dependencias del proyecto, definir comandos personalizados del proyecto.</p>
+
+  <p><strong>Referencias</strong><br>
+    - <a href="https://www.freecodecamp.org/news/learn-these-javascript-fundamentals-and-become-a-better-developer-2a031a0dc9cf/">https://www.freecodecamp.org/news/learn-these-javascript-fundamentals-and-become-a-better-developer-2a031a0dc9cf/</a><br>
+    - <a href="https://www.freecodecamp.org/news/lets-clear-up-the-confusion-around-the-slice-splice-split-methods-in-javascript-8ba3266c29ae/">https://www.freecodecamp.org/news/lets-clear-up-the-confusion-around-the-slice-splice-split-methods-in-javascript-8ba3266c29ae/</a><br>
+    - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date</a><br>
+    - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array</a>
+  </p>
+ </div>
+</body>
+</html>
