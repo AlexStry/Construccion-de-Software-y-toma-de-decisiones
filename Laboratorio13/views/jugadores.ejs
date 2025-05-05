@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('includes/head.ejs') %>
+  <body>
+    <h1>Lista de Jugadores Registrados</h1>
+    <% if (jugadores.length > 0) { %>
+      <ul>
+        <% for (let j of jugadores) { %>
+          <li>
+            <strong><%= j.nombre %></strong> – <%= j.puntos %> PPG 
+            <% if (j.esEstrella) { %>
+              ⭐ Estrella
+            <% } %>
+          </li>
+        <% } %>
+      </ul>
+    <% } else { %>
+      <p>No hay jugadores registrados aún.</p>
+    <% } %>
+    <a href="/jugador/agregar">Agregar otro jugador</a>
+    <%- include('includes/footer.ejs') %>
+  </body>
+</html>
