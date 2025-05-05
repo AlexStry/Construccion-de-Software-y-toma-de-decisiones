@@ -1,1 +1,13 @@
+Empieza con: npm install
+Luego npm start
 
+Las cookies se pueden checar en:
+- http://localhost:3000/set-cookie
+- http://localhost:3000/leer-cookie
+
+Sesiones: 
+- http://localhost:3000/login
+- http://localhost:3000/perfil
+- http://localhost:3000/logout
+
+Repuestas de preguntas en pagina inicial.
