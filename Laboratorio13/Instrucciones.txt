@@ -1,0 +1,5 @@
+El formulario se puede encontrar empezando el servidor: npm start
+Y entrando al link del formulario: http://localhost:3000/jugador/agregar
+Para ver los jugadores registrados se puede entrar a la seccion de "ver lista de jugadores" en el app
+O se puede ingresar a: http://localhost:3000/jugador/agregar
+Igual el resto del sitio sigue funcionando igual, se puede ingresar en: http://localhost:3000
