@@ -5,3 +5,15 @@ Correr:
 - npm install
 - node server.js
 - http://localhost:3000
+
+¿Qué importancia tiene AJAX en el desarrollo de RIA’s (Rich Internet Applications)?
+AJAX es clave para que las aplicaciones web se sientan más rápidas y fluidas. Permite que solo se actualice una parte de la página sin recargar todo.
+
+¿Qué implicaciones de seguridad tiene AJAX?
+Al usar AJAX, se exponen rutas del servidor que podrían ser atacadas si no se protegen bien.
+
+¿Dónde se deben hacer las validaciones de seguridad, del lado del cliente o del lado del servidor?
+Siempre del lado del servidor. Aunque se puede validar en el cliente para mejorar la experiencia, la validación real debe ser en el servidor porque lo del cliente se puede manipular.
+
+¿Qué es JSON?
+JSON es un formato ligero para enviar y recibir datos. Es fácil de entender y escribir, y se usa mucho cuando el cliente y el servidor se comunican, sobre todo en aplicaciones modernas.
