@@ -1,0 +1,7 @@
+Este laboratorio implementa un formulario web que envía datos al servidor utilizando AJAX (fetch)en lugar de un formulario tradicional.
+El servidor responde con formato JSON, guarda los datos en un archivo .txt y muestra una respuesta en pantalla sin recargar la página.
+
+Correr:
+- npm install
+- node server.js
+- http://localhost:3000
