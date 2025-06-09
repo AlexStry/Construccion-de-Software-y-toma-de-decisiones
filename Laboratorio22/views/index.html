@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario con Archivo</title>
+  <style>
+    body { font-family: sans-serif; padding: 2rem; background: #f7f7f7; }
+    form { background: white; padding: 2rem; border-radius: 8px; max-width: 400px; margin: auto; }
+    input, button { display: block; width: 100%; margin-bottom: 1rem; padding: 0.5rem; }
+  </style>
+</head>
+<body>
+  <form action="/form_method" method="POST" enctype="multipart/form-data">
+    <label for="indice">Índice:</label>
+    <input type="number" name="indice" id="indice" required>
+
+    <label for="imprimir">Texto:</label>
+    <input type="text" name="imprimir" id="imprimir" required>
+
+    <label for="archivo">Subir imagen:</label>
+    <input type="file" name="archivo" id="archivo" accept="image/png, image/jpeg">
+
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>
