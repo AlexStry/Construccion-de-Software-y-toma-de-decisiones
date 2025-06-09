@@ -1,4 +1,4 @@
-# Pruebas
+# Pruebas(Descargar THUNDER CLIENT en VScode)
 GET http://localhost:3000/game/create     # Reinicia el juego
 GET http://localhost:3000/game/status     # Ver estado actual del juego
 GET http://localhost:3000/game/dice       # Lanzar dado para decidir turno
