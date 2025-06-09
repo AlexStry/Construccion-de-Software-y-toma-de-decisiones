@@ -1,0 +1,10 @@
+Este laboratorio implementa un formulario web que permite a los usuarios subir archivos desde su computadora al servidor.  
+Se utiliza la librería "multer" en Node.js para recibir y almacenar los archivos en una carpeta local.  
+También se utiliza un filtro para restringir los tipos de archivos permitidos (solo imágenes .jpg, .jpeg, .png).  
+Los archivos se almacenan en la carpeta "/uploads", con nombres únicos generados mediante timestamp para evitar sobrescribir archivos con el mismo nombre.  
+Los archivos subidos pueden visualizarse directamente desde el navegador, ya que la carpeta `uploads` es accesible como contenido estático.
+
+Correr:
+- npm install
+- node server.js
+- http://localhost:3000
